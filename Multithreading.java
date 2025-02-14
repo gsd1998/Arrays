@@ -2,6 +2,10 @@ package interviewQA;
 
 public class Multithreading {
 
+    /*
+    * Print even and odd numbers using two threads
+    */
+    
     static boolean evenFlag = false;
     private static final Object lock = new Object();
 
