@@ -4,15 +4,15 @@ public class FibonacciSeries {
     public static void main(String[] args){
 
         //0 1 1 2 3 5 8 13 21 34
-        int num = 4; //number of elements to be printed
+        int num = 1; //number of elements to be printed
 
         //Fibonacci(num);
 
         for(int i = 0; i < num; i++){
-            System.out.println(" i : " + i);
-            System.out.println("returned val : " + FibonacciRecursion(i) + " ");
-            //FibonacciRecursion(i);
+           // System.out.println(" i : " + i);
+            //System.out.println("returned val : " + FibonacciRecursion(i) + " ");
         }
+        System.out.println(FibonacciRecursion(4));
     }
 
     private static void Fibonacci(int num) {
@@ -40,9 +40,11 @@ public class FibonacciSeries {
         if(num <= 1){
             return num;
         }
-        System.out.println("num : " + num);
-        System.out.println("FibonacciRecursion(num-1) : " + (num-1) + "  FibonacciRecursion(num-2) : " + (num-2));
-        return FibonacciRecursion(num-1) + FibonacciRecursion(num-2);
+        //System.out.println("num : " + num);
+        //System.out.println("FibonacciRecursion(num-1) : " + (num-1) + "  FibonacciRecursion(num-2) : " + (num-2));
+        int res1  = FibonacciRecursion(num-1);
+        int res2 = FibonacciRecursion(num-2);
+        return res1 + res2;
     }
 }
 /*
@@ -64,4 +66,12 @@ public class FibonacciSeries {
             returned val : 2
 
 Keeps drilling down till we reach FibonacciRecursion(1) and FibonacciRecursion(0) coz those two are the only values which we know
+
+
+f(4) = f(3) + f(2)
+f(3) = f(2) + f(1)
+f(2) = f(1) + f(0)
+f(2) = 1  + 0  => 1
+f(3) = 1  + 1  => 2
+f(4) = 2  + 1  => 3
  */
