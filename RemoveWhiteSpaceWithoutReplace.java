@@ -1,6 +1,6 @@
 package interviewQA;
 
-public class RemoveWhileSpaceWithoutReplace {
+public class RemoveWhiteSpaceWithoutReplace {
     public static void main(String[] args) {
         String input = "  Hello World  ";
 
